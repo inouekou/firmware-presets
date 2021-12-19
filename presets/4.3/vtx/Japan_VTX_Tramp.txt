@@ -1,0 +1,47 @@
+#$ TITLE: Japan ham frequency IRC Tramp 
+#$ FIRMWARE_VERSION: 4.2
+#$ FIRMWARE_VERSION: 4.3
+#$ CATEGORY: VTX
+#$ STATUS: COMMUNITY
+#$ KEYWORDS:  vtx, vtx table, IRC, tramp, Japan
+#$ AUTHOR: Inoue Kou 052.jp
+#$ DESCRIPTION: For IRC Tramp. Set the seven frequencies that can be used in Japan
+#$ DESCRIPTION: 日本のアマチュア無線で使用できる7波のVTXテーブルを設定します。VTXの種類に応じて電力レベルを変更してください。
+#$ DESCRIPTION: The information provided on this preset is for educational and entertainment purposes only. Betaflight makes no representations as to the safety or legality of the use of any information provided herein. End users assume all responsibility and liability for ensuring they are complying with all relevant laws and regulations. 
+#$ DESCRIPTION: ----------
+#$ DESCRIPTION: Using the VTX tables as provided may be in breach of your local RF laws. It is up to the end user to research and comply with local regulations and in using these presets the user assumes all liability associated with breaching local regulations.
+#$ DISCUSSION:  https://github.com/betaflight/firmware-presets/pull/
+
+# reset basic Vtx settings
+
+set vtx_channel = 0
+set vtx_power = 0
+set vtx_low_power_disarm = OFF
+set vtx_freq = 0
+set vtx_pit_mode_freq = 0
+set vtx_halfduplex = ON
+set vtx_spi_bus = 0
+
+# reset VTx table
+
+vtxtable bands 0
+vtxtable channels 0
+#vtxtable powerlevels 0
+#vtxtable powervalues
+#vtxtable powerlabels
+
+vtx 0 0 0 0 0 900 900
+vtx 1 0 0 0 0 900 900
+vtx 2 0 0 0 0 900 900
+vtx 3 0 0 0 0 900 900
+vtx 4 0 0 0 0 900 900
+vtx 5 0 0 0 0 900 900
+vtx 6 0 0 0 0 900 900
+vtx 7 0 0 0 0 900 900
+vtx 8 0 0 0 0 900 900
+vtx 9 0 0 0 0 900 900
+
+# Set vtxtable
+vtxtable bands 1
+vtxtable channels 7
+vtxtable band 1 JPBAND   J CUSTOM  5705 5740 5745 5780 5785 5790 5800
